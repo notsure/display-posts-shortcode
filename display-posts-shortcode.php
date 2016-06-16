@@ -469,7 +469,22 @@ function be_display_posts_shortcode( $atts ) {
 		 * @param array    $original_atts Original attributes passed to the shortcode.
 		 */
 		$class = array_map( 'sanitize_html_class', apply_filters( 'display_posts_shortcode_post_class', $class, $post, $listing, $original_atts ) );
-		$output = '<' . $inner_wrapper . ' class="' . implode( ' ', $class ) . '">' . $image . $title . $date . $author . $category_display_text . $excerpt . $content . '</' . $inner_wrapper . '>';
+		
+		$imageHolder = '';
+		if ($image) {
+			$imageHolder = '<div class="image-holder">' . $image . '</div>';
+		}
+		
+		$metaHolder = '';
+		if ($date || $author || $category_display_text) {
+			$metaHolder = '<div class="meta-holder">' . $date . $author . $category_display_text . '</div>';
+		}
+		
+		$contentHolder = '';
+		if ($title || $metaHolder || $excerpt || $content) {
+			$contentHolder = '<div class="content-holder">' . $title . $metaHolder . $excerpt . $content . '</div>';
+		}
+		$output = '<' . $inner_wrapper . ' class="' . implode( ' ', $class ) . '">' . $imageHolder . $contentHolder . '</' . $inner_wrapper . '>';
 		
 		/**
 		 * Filter the HTML markup for output via the shortcode.
