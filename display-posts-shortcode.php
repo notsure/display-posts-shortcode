@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Display Posts Shortcode
+ * Plugin Name: Naba Display Posts Shortcode
  * Plugin URI: http://www.billerickson.net/shortcode-to-display-posts/
  * Description: Display a listing of posts using the [display-posts] shortcode
  * Version: 2.7.0
- * Author: Bill Erickson
- * Author URI: http://www.billerickson.net
+ * Author: Philip Nachbauer
+ * Author URI: http://www.naba.at
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
  * General Public License version 2, as published by the Free Software Foundation.  You may NOT assume 
@@ -14,10 +14,14 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
+ * ATTENTION: 
+ * This is a fork of the original plugin by Bill Erickson.
+ * There is NO WARRANTY at all. For detailed information about this plugin visit
+ * http://www.billerickson.net/shortcode-to-display-posts/
+ * 
  * @package Display Posts
  * @version 2.7.0
- * @author Bill Erickson <bill@billerickson.net>
- * @copyright Copyright (c) 2011, Bill Erickson
+ * @author Philip Nachbauer <hello@naba.at>
  * @link http://www.billerickson.net/shortcode-to-display-posts/
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
