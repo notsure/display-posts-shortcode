@@ -488,9 +488,9 @@ function be_display_posts_shortcode( $atts ) {
 		if ($title || $metaHolder || $excerpt || $content) {
 			$contentHolderClass = 'content-holder';
 			if (!$image) {
-				$contentHolderClass += ' no-image';
+				$contentHolderClass .= ' no-image';
 			}
-			$contentHolder = '<div class="content-holder">' . $title . $metaHolder . $excerpt . $content . '</div>';
+			$contentHolder = '<div class="' . $contentHolderClass . '">' . $title . $metaHolder . $excerpt . $content . '</div>';
 		}
 		$output = '<' . $inner_wrapper . ' class="' . implode( ' ', $class ) . '">' . $imageHolder . $contentHolder . '</' . $inner_wrapper . '>';
 		
